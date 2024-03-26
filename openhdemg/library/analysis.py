@@ -1186,7 +1186,7 @@ def compute_SVR(
     for mu in range(len(IDR)): # for all MUs
         # train the model on the data 
         xtmp = np.transpose([IDR[mu].timesec[1:]]) # time vector, removing first element
-        ytmp = IDR[mu].idr[1:].ravel() # discharge rates, removing first element, since DR has been assigned to second pulse
+        ytmp = IDR[mu].idr[1:].to_numpy() # discharge rates, removing first element, since DR has been assigned to second pulse
         xdiff = IDR[mu].diff_mupulses[1:].values # time between discharges, will use for discontinuity calc
         mup = np.array(IDR[mu].mupulses) # motor unit pulses, samples
 

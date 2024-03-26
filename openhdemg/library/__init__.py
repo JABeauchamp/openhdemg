@@ -23,6 +23,7 @@ from openhdemg.library.openfiles import (
     asksavefile,
     emg_from_samplefile,
 )
+from openhdemg.library.analyzePICs import *
 from openhdemg.library.analysis import *
 from openhdemg.library.plotemg import *
 from openhdemg.library.tools import *
